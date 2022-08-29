@@ -1,12 +1,11 @@
 from gettext import install
 
-import requests
+
 from bs4 import BeautifulSoup as bs
 import pandas as pd
 from time import sleep
-from tqdm import tqdm
+
 from selenium.webdriver import Chrome
-# from selenium.webdriver.support.ui import WebDriverWait as wait
 from selenium.webdriver.common.by import By
 
 browser = Chrome(r"C:\Users\Lao98\Desktop\Python\Parsing\chromedriver")
@@ -64,7 +63,6 @@ for p in range(1, 12):
     except:
         print(p, 'error')
     sleep(3)
-data
 
 header = ['available', 'price', 'name', 'rating', 'link']
 table = pd.DataFrame(data, columns=header)
